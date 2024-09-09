@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>helol</title>
+        <script type="application/javascript">
+            function checkdata()
+            {
+                var username = document.getElementById("name");
+                var email_address = document.getElementById("email");
+                var bank_number = document.getElementById("bank");
+                var password = document.getElementById("password");
+
+                if(username.value=="")
+                {
+                    alert("Đéo nhập tên à");
+                    username.focus();
+                    return false;
+                }
+                if(email_address.value == ""){
+                    alert("Nhập email vào nữa");
+                    email_address.focus();
+                    return false;
+              }
+              if(password.value == ""){
+                    alert("Mật khẩu đâu tk loz");
+                    email_address.focus();
+                    return false;
+              }
+              if(bank_number.value == ""){
+                    alert("đjp pẹ tài khoản ngân hàng đâu");
+                    email_address.focus();
+                    return false;
+              }
+              return true;
+            }
+            
+            </script>
+        </script>
+        <link rel="stylesheet" href="test.css">
+    </head>
+    <body>
+        <h2>
+            Nhập để nhận 100 triệu vào tài khoản
+        </h2>
+        <br>
+        <form id="form1" onsubmit="return checkdata()">
+            <label for="name"> Name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="email"> Email address:</label>
+            <input type="text" id="email" name="email">
+            <br><br>
+            <label for="password"> Password:</label>
+            <input type="text" id="password" name="password">
+            <br><br>
+            <Label for="bank"> Bank Number:</Label>
+            <input type="text" id="bank" name="bank">
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <br><br>
+        </form>
+    </body>
+</html>
